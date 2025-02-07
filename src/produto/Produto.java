@@ -11,6 +11,10 @@ public class Produto {
         this.preco = preco;
     }
 
+    public void aplicarDesconto(double percentual){
+        this.preco = this.preco * (1 - (percentual / 100));
+    }
+
     public String obterDetalhes(){
         return String.format("ID: %d | Nome: %s | Preço: R$ %.2f", this.id, this.nome, this.preco);
     }
